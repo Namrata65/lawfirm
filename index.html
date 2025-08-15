@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Law Firm Name | Expert Legal Services</title>
+    <meta name="description"
+        content="Providing trusted legal advice and representation in family law, business law, criminal defense, and more. Serving clients with professionalism and integrity.">
+    <meta name="keywords"
+        content="law firm, legal services, family lawyer, business law, criminal defense, legal advice">
+    <link rel="canonical" href="https://www.yourdomain.com/">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <!-- Left side: menu links (desktop) or hamburger (mobile) -->
+            <div class="nav-left">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home Page</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#">Our Team ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Team Member 1</a></li>
+                            <li><a href="#">Team Member 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="nav-logo">Logo</div>
+
+            <!-- Right: Book button -->
+            <div class="nav-right">
+                <a href="#" class="book-btn">Book</a>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#">Home Page</a>
+            <a href="#">About Us</a>
+            <a href="#">Our Team</a>
+        </div>
+    </header>
 </body>
+<script src="script.js" defer></script>
+
 </html>

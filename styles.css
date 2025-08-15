@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.5rem;
+}
+
+.book-btn {
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  padding: 1rem;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
