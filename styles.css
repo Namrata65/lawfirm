@@ -1,5 +1,8 @@
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
@@ -76,10 +79,248 @@ body {
   padding: 0.5rem 0;
 }
 
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+.consultation-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: left; /* Left align content */
+}
+
+.consultation-section small {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.consultation-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.consultation-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  
+}
+
+.consultation-section ul {
+  display: flex;
+  flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+  gap: 30px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.consultation-section ul li {
+  display: flex;
+  flex-flow: column;
+  width: calc(33.33% - 20px); /* Default: 3 items per row for large screens */
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.consultation-section ul li:hover {
+  background-color: #e1e1e1;
+}
+
+.consultation-section ul li .icon {
+  margin-top: 20px;
+  font-size: 3rem;
+  color: #007bff;
+  margin-right: 15px;
+}
+
+.consultation-section ul li h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #333;
+}
+
+.consultation-section ul li p {
+  font-size: 1rem;
+  color: #666;
+}
+.key-practice-areas {
+  text-align: center;
+  padding: 40px;
+}
+
+.key-practice-areas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.key-practice-areas p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.practice-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.practice-card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.practice-card:hover {
+  background-color: #e2e2e2;
+}
+
+.practice-card .tagline {
+  display: block;
+  font-size: 0.9rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.practice-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.practice-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.practice-card button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.practice-card button:hover {
+  background-color: #0056b3;
+}
+
+.practice-image {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .practice-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .practice-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .consultation-section ul li {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
   .hamburger {
     display: block;
   }
